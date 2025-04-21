@@ -5,9 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/main.js" defer></script>
+    <script type="module" src="./js/main.js"></script>
 </head>
 <body>
+    <h1>The Movie Database</h1>
+    <div id="sortContainer">
+        <form id="sortForm">
+            <p>Sortera efter: </p>
+            <select id="sortSelect">
+                <option value="alphAscending">Bokstavsordning, stigande</option>
+                <option value="alphDescending">Bokstavsordning, fallande</option>
+                <option value="scoreAscending">Average score, stigande</option>
+                <option value="scoreDescending">Average score, fallande</option>
+            </select>
+        </form>
+    </div>
+    <div id="searchContainer">
+        <form id="searchForm">
+            <label for="searchInput">Sök efter film eller person</label>
+            <input id="searchInput" type="text" placeholder="Sök">
+            <button type="submit">Sök</button>
+        </form>
+    </div>
+
+    <!-- Error -->
+    <div class="hidden" id="errorContainer">
+        <p id="errorMessage"></p>
+    </div>
+
+    <nav id="navButtons">
+        <button id="topRated" type="button">Top 10 filmer</button>
+        <button id="popular" type="button">Populära filmer just nu</button>
+        <button id="random" type="button">Slumpa en film!</button>
+    </nav>
+
+    <!-- Lista med resultat, validerar i render.js om den är ordered eller unordered -->
+    <div id="results"></div>
+
+    <!-- Bygg senare -->
+    <footer>
     
+    </footer>
 </body>
 </html>
