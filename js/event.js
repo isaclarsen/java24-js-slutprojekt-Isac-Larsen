@@ -12,19 +12,19 @@ export function initListeners(){
 
     //Eveentlistener för top10 knapp
     top10Btn.addEventListener("click", async() => {
-        resultContainer.innerHTML = "";
+        resultContainer.innerHTML = ""
 
         const movieTitle = document.createElement("h2")
         movieTitle.innerText = "Top 10 filmer: "
         resultContainer.append(movieTitle)
-        
+
         const movies = await fetchTopRatedMovies()
         renderMovies(movies, resultContainer, true)
     })
 
     //Eventlistener för populär knappen
     popularBtn.addEventListener("click", async() => {
-        resultContainer.innerHTML = "";
+        resultContainer.innerHTML = ""
 
         const movieTitle = document.createElement("h2")
         movieTitle.innerText = "Populära filmer just nu: "
@@ -37,7 +37,7 @@ export function initListeners(){
     //Eventlistener för sök
     searchForm.addEventListener("submit", async(event) => {
         event.preventDefault();
-        resultContainer.innerHTML = ""
+        resultContainer.innerHTML = "<h1>LADDAR...</h1>"
         renderError("")
 
         const searchQuery = searchInput.value.trim();
@@ -56,6 +56,8 @@ export function initListeners(){
             renderError("Din sökning gav inget resultat, prova söka på något annat!")
         }
         
+        resultContainer.innerHTML = ""
+
         if(movies.length > 0){
             const movieTitle = document.createElement("h2")
             movieTitle.innerText = `Filmer som matchar "${searchQuery}": `

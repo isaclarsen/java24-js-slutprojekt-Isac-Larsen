@@ -9,6 +9,11 @@
 </head>
 <body>
     <h1>The Movie Database</h1>
+    <nav id="navButtons">
+        <button id="topRated" type="button">Top 10 filmer</button>
+        <button id="popular" type="button">Populära filmer just nu</button>
+        <button id="random" type="button">Slumpa en film!</button>
+    </nav>
     <div id="sortContainer">
         <form id="sortForm">
             <p>Sortera efter: </p>
@@ -33,11 +38,6 @@
         <p id="errorMessage"></p>
     </div>
 
-    <nav id="navButtons">
-        <button id="topRated" type="button">Top 10 filmer</button>
-        <button id="popular" type="button">Populära filmer just nu</button>
-        <button id="random" type="button">Slumpa en film!</button>
-    </nav>
 
     <!-- Lista med resultat, validerar i render.js om den är ordered eller unordered -->
     <div id="results"></div>
