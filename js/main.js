@@ -1,11 +1,10 @@
+import { searchMovies, searchPerson } from "./api.js";
 import { initListeners } from "./event.js";
+import { renderMovies } from "./render.js";
 
 
-//TODO
-// Gör klart alla fetches i api
-// Gör klart alla eventlisteners i event
-
+//TODO OCH TANKAR
 //Lägg in default view på listan
-
+//Sortering kvar sen styling
 
 initListeners();
