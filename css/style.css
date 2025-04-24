@@ -15,6 +15,42 @@ img {
     border-radius: 5px;
 }
 
+#sortForm{
+    display: flex;
+    justify-content: right;
+    margin-right: 50px;
+    /* border: 1px solid red; */
+}
+
+#sortSelect{
+    border: none;
+    background-color: #846ee9;
+    border-radius: 5px;
+    color: white;
+    margin: 12px;
+}
+
+#searchInput{
+    border: none;
+    border-radius: 5px;
+    color: rgb(3, 3, 3);
+    padding: 5px;
+    margin: 12px;
+}
+
+#searchContainer button {
+    background-color: #846ee9;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    width: 50px;
+}
+
+#searchContainer button:hover{
+    background-color: #9a8bdf;
+}
+
 nav button {
     border-radius: 5px;
     background-color: #846ee9;
@@ -29,6 +65,18 @@ nav button {
 
 button:hover {
     background-color: #9a8bdf;
+}
+
+.toggleProjects{
+    border-radius: 5px;
+    background-color: #846ee9;
+    color: #ffffff;
+    border: none;
+    width: 180px;
+    padding: 15px 5px;
+    margin: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 #errorContainer {
     padding: 3px;
@@ -47,7 +95,7 @@ button:hover {
     list-style: none;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-items: center;
-    gap: 15px;
+    gap: 69px;
     list-style-type: none;
     margin-right: 200px;
     margin-left: 200px;
@@ -60,13 +108,39 @@ button:hover {
     padding: 50px;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  }
+    transition-duration: 150ms;
+}
 
 #results li:hover{
     transform: scale(1.05);
+    background-color: rgba(38, 31, 78, 0.95);
+}
+
+.randomMovieContainer{
+    background-color: rgba(21, 17, 44, 0.95);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition-duration: 150ms;
+    max-width: 250px;
+    margin: 50px;
+    margin-left: 600px;
+}
+
+.randomMovieContainer:hover{
+    transform: scale(1.05);
+    background-color: rgba(38, 31, 78, 0.95);
+}
+
+.randomMovieContainer a {
+    color:#ffffff
 }
 
 #results h3 {
     color:#846ee9;
+}
+
+h2 {
+    text-align: left;
+    padding-left: 225px;
 }

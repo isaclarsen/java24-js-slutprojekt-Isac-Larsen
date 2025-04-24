@@ -14,17 +14,6 @@
         <button id="popular" type="button">Populära filmer just nu</button>
         <button id="random" type="button">Slumpa en film!</button>
     </nav>
-    <div id="sortContainer">
-        <form id="sortForm">
-            <p>Sortera efter: </p>
-            <select id="sortSelect">
-                <option value="alphAscending">Bokstavsordning, stigande</option>
-                <option value="alphDescending">Bokstavsordning, fallande</option>
-                <option value="scoreAscending">Average score, stigande</option>
-                <option value="scoreDescending">Average score, fallande</option>
-            </select>
-        </form>
-    </div>
     <div id="searchContainer">
         <form id="searchForm">
             <label for="searchInput">Sök efter film eller person</label>
@@ -33,18 +22,28 @@
         </form>
     </div>
 
+    <div id="sortContainer" class="hidden">
+        <form id="sortForm">
+            <p>Sortera efter: </p>
+            <select id="sortSelect">
+                <option value="default">Default</option>
+                <option value="alphAscending">Bokstavsordning, stigande</option>
+                <option value="alphDescending">Bokstavsordning, fallande</option>
+                <option value="scoreAscending">Score, stigande</option>
+                <option value="scoreDescending">Score, fallande</option>
+            </select>
+        </form>
+    </div>
+    
     <!-- Error -->
     <div class="hidden" id="errorContainer">
         <p id="errorMessage"></p>
     </div>
-
-
-    <!-- Lista med resultat, validerar i render.js om den är ordered eller unordered -->
-    <div id="results"></div>
-
-    <!-- Bygg senare -->
-    <footer>
     
-    </footer>
+    
+    <!-- Lista med resultat, validerar i render.js om den är ordered eller unordered -->
+    <div id="results">
+
+    </div>
 </body>
 </html>

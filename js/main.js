@@ -1,6 +1,5 @@
-import { searchMovies, searchPerson } from "./api.js";
 import { initListeners } from "./event.js";
-import { renderMovies } from "./render.js";
+
 
 
 //TODO OCH TANKAR
@@ -8,5 +7,13 @@ import { renderMovies } from "./render.js";
 //Sortering kvar sen styling
 //BESKRIVNING I FILMER
 //BEskrvining är väldigt lång, försök fixa i rendermovies så den är hidden förutom när man söker
+
+
+//Felhantering Klar
+//Definier element i element variabel namn
+
+//Class för oop
+//Extra vg funktion med api (trailer)
+//Kommentarer
 
 initListeners();
