@@ -1,7 +1,6 @@
 const apiKey = "bf3184b873a99a201717b3a23a6c45a2";
 const baseUrl = "https://api.themoviedb.org/3/";
 
-//Hämta top filmer från API
 export async function fetchTopRatedMovies(){
     try{
         const res = await fetch(`${baseUrl}movie/top_rated?api_key=${apiKey}`);
@@ -19,7 +18,6 @@ export async function fetchTopRatedMovies(){
     }
 }
 
-//Hämtar populära filmer från API
 export async function fetchPopularMovies(){
     try{
         const res = await fetch(`${baseUrl}movie/popular?api_key=${apiKey}`);
@@ -38,7 +36,6 @@ export async function fetchPopularMovies(){
     }
 }
 
-//Hämtar filmer genom sök query
 export async function searchMovies(searchQuery){
     try {
         const res = await fetch(`${baseUrl}search/movie?query=${searchQuery}&api_key=${apiKey}&page=1`);
@@ -49,7 +46,6 @@ export async function searchMovies(searchQuery){
     }
 }
 
-//Hämtar personer genom sök query
 export async function searchPerson(searchQuery){
     try {
         const res = await fetch(`${baseUrl}search/person?query=${searchQuery}&api_key=${apiKey}&page=1`);

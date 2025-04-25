@@ -3,47 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Movie Database</title>
     <link rel="stylesheet" href="./css/style.css">
     <script type="module" src="./js/main.js"></script>
 </head>
 <body>
-    <h1>The Movie Database</h1>
-    <nav id="navButtons">
-        <button id="topRated" type="button">Top 10 filmer</button>
-        <button id="popular" type="button">Populära filmer just nu</button>
-        <button id="random" type="button">Slumpa en film!</button>
-    </nav>
-    <div id="searchContainer">
-        <form id="searchForm">
-            <label for="searchInput">Sök efter film eller person</label>
-            <input id="searchInput" type="text" placeholder="Sök">
-            <button type="submit" id="searchBtn">Sök</button>
-        </form>
-    </div>
+    <header>
+        <h1>The Movie Database</h1>
+        <nav id="navButtons">
+            <button id="topRated" type="button">Top 10 filmer</button>
+            <button id="popular" type="button">Populära filmer just nu</button>
+            <button id="random" type="button">Slumpa en film!</button>
+        </nav>
+        <div id="searchContainer">
+            <form id="searchForm">
+                <label for="searchInput">Sök efter film eller person</label>
+                <input id="searchInput" type="text" placeholder="Sök">
+                <button type="submit" id="searchBtn">Sök</button>
+            </form>
+        </div>
+    
+        <div id="sortContainer" class="hidden">
+            <form id="sortForm">
+                <p>Sortera efter: </p>
+                <select id="sortSelect">
+                    <option value="default">Default</option>
+                    <option value="alphAscending">Bokstavsordning, stigande</option>
+                    <option value="alphDescending">Bokstavsordning, fallande</option>
+                    <option value="scoreAscending">Score, stigande</option>
+                    <option value="scoreDescending">Score, fallande</option>
+                </select>
+            </form>
+        </div>
+    </header>
+    <main>
+        <!-- Error -->
+        <div class="hidden" id="errorContainer">
+            <p id="errorMessage"></p>
+        </div>
 
-    <div id="sortContainer" class="hidden">
-        <form id="sortForm">
-            <p>Sortera efter: </p>
-            <select id="sortSelect">
-                <option value="default">Default</option>
-                <option value="alphAscending">Bokstavsordning, stigande</option>
-                <option value="alphDescending">Bokstavsordning, fallande</option>
-                <option value="scoreAscending">Score, stigande</option>
-                <option value="scoreDescending">Score, fallande</option>
-            </select>
-        </form>
-    </div>
+        <!-- Lista med resultat, validerar i render.js om den är ordered eller unordered -->
+        <div id="results">
     
-    <!-- Error -->
-    <div class="hidden" id="errorContainer">
-        <p id="errorMessage"></p>
-    </div>
-    
-    
-    <!-- Lista med resultat, validerar i render.js om den är ordered eller unordered -->
-    <div id="results">
-
-    </div>
+        </div>
+    </main>
 </body>
 </html>

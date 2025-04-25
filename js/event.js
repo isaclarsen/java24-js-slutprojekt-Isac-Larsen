@@ -17,7 +17,7 @@ export function initListeners(){
     const searchInput = document.querySelector("#searchInput");
     const sortContainer = document.querySelector("#sortContainer");
 
-    //Eventlistener för top10 knapp
+/**-------EVENTLISTENER TOP10 KNAPP -------- */
     top10Btn.addEventListener("click", async() => {
         resultContainer.innerHTML = "";
         sortContainer.classList = "";
@@ -36,7 +36,7 @@ export function initListeners(){
         
     })
 
-    //Eventlistener för populär knappen
+/**-------EVENTLISTENER POPULÄR KNAPP -------- */
     popularBtn.addEventListener("click", async() => {
         resultContainer.innerHTML = "";
         sortContainer.classList = "";
@@ -56,7 +56,7 @@ export function initListeners(){
 
     })
 
-    //Eventlistener för sök
+/**-------EVENTLISTENER SÖK-------- */
     searchForm.addEventListener("submit", async(event) => {
         event.preventDefault();
         renderError("");
@@ -101,7 +101,7 @@ export function initListeners(){
     })
 
 
-//Eventlistener som lyssnar på dropdown menyn för sortering
+/**-------EVENTLISTENER SORTERING -------- */
       sortSelect.addEventListener("change", event => {
         event.preventDefault();
     
@@ -158,7 +158,7 @@ export function initListeners(){
         }
     });
 
-    
+/**-------EVENTLISTENER SLUMPA FILM KNAPP -------- */   
     randomBtn.addEventListener("click", async () => {
         const randomMovie = new RandomMovie("bf3184b873a99a201717b3a23a6c45a2");
         resultContainer.innerHTML = "<h1>LADDAR...</h1>";
@@ -169,7 +169,6 @@ export function initListeners(){
       
           resultContainer.innerHTML = "";
       
-          
           renderRandomMovie(randomMovie, resultContainer)
         } catch (error) {
           renderError(error);

@@ -30,7 +30,6 @@ export class RandomMovie{
         this.popularity = randomMovie.popularity;
         this.trailer = trailerUrl;
 
-
     }catch(error){
         throw new Error("Något internt fel har inträffat, vänligen prova igen!");
     }
@@ -43,7 +42,6 @@ async fetchMovieTrailer(movieId){
     
     const trailer = data.results.find(video => video.type === "Trailer" && video.site === "YouTube");
 
-    //Skapar youtubelänk
     return trailer ? `https://www.youtube.com/watch?v=${trailer.key}` : null;
-}
+    }
 }
