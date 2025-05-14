@@ -1,6 +1,6 @@
 # The Movie Database
 
-Detta projekt är en Vanilla JavaScript-baserad webbapplikation som kommunicerar med The Movie Database (https://www.themoviedb.org) API för att visa information om filmer och personer. Användaren kan se topprankade filmer, populära filmer just nu, slumpmässiga filmer med trailers, samt söka efter filmer eller personer.
+Detta projekt är en Vanilla JavaScript-baserad webbapplikation som kommunicerar med The Movie Database (https://www.themoviedb.org) API.
 
 ## Funktioner
 
