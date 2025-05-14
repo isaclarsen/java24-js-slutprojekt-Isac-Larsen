@@ -9,7 +9,10 @@ Detta projekt är en Vanilla JavaScript-baserad webbapplikation som kommunicerar
 - Generera en slumpmässig film med trailer länk
 - Sök efter personer och filmer
 - Sortera i bokstavsordning eller popularitet
-- Visar personers mest kända verk.'
+- Visar personers mest kända verk.
+
+## Syfte
+En enkel webapp för att snabbt kunna söka upp sina favorit filmer eller skådespelare. Få en snabb överblick om resultaten på ett enkelt och användarvänligt sätt. Extra funktionen att generera en slump-film är gjord för att kunna snabbt hitta en film att kolla på och därav finns också en trailer länk så man kan ta en närmare titt på filmen som genererades.  
 
 ## Design
 - Visar filmer/serier med följande:
